@@ -1,2 +1,14 @@
 sftp-config.json
 presets/default.preset
+
+# Tasks
+.ftppass
+/tmp/*
+!/tmp/.gitkeep
+
+# npm
+node_modules
+npm-debug*.log
+
+# Ignore server cache
+.sqs-cache

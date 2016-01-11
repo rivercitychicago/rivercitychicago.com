@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb",
+  "ecmaFeatures": {
+    globalReturn: true
+  },
+  "globals": {
+    "$",
+    "jQuery",
+    "TweenLite",
+    "TimelineLite",
+    "Bounce",
+    "Linear",
+    "Elastic"
+  }
+}
