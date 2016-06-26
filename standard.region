@@ -1,0 +1,3 @@
+<div class="grid--max grid--gutter">
+  {squarespace.main-content}
+</div>

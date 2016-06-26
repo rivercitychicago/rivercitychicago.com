@@ -1,0 +1,25 @@
+    </div>
+  </section>
+
+  <div id="footerWrapper" class="footer">
+    <div class="grid--max grid--gutter">
+      <footer id="footer">
+        <squarespace:block-field id="footerBlocks-1" columns="12" label="Footer Content" />
+        {.section website}
+          {.if socialAccounts}
+          <div id="footerBlocks-2" class="social-links" data-content-field="connected-accounts">
+            {.repeated section socialAccounts}<a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a>{.end}
+          </div>
+          {.end}
+        {.end}
+      </footer>
+      <div class="sqs-footer-injection">{squarespace-footers}</div>
+    </div>
+  </div>
+
+  <nav class="mobileNav" id="mobileNav">
+    <squarespace:navigation navigationId="mainNav" template="navigation" />
+  </nav>
+
+</body>
+</html>

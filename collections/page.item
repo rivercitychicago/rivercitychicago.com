@@ -1,6 +1,7 @@
 {.section item}
 
 <article class="{@|item-classes}" id="article-{id}" data-item-id="{id}">
+BEGIN
 
   <!--SPECIAL CONTENT-->
 
@@ -28,6 +29,7 @@
   <!--POST BODY-->
 
 
+  <p>ABC</p>
   {.section body}<div class="body entry-content">{@}</div>{.end}
 	{.passthrough?}{.or}{.section sourceUrl}<div class="entry-source">Source: <a href="{sourceUrl}" target="_blank">{sourceUrl|truncate 42}</a></div>{.end}{.end}
 

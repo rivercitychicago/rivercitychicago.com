@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  {.if template.mobileStylesEnabled}
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {.end}
+  {squarespace-headers}
+
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Open+Sans:400,700|Lora:400,400italic,700,700italic|PT+Serif:400,400italic,700,700italic|Volkhov:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <squarespace:script src="main.js" />
+</head>
+
+<body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.section logoImageUrl} logo-image{.or} site-title{.end}{.end}">
+
+  <header id="header" class="header">
+    <div class="constraint grid--gutter">
+      <div id="logo" class="logo" data-content-field="site-title">
+        {.section website}
+          {.section logoImageUrl}
+            <img src="{@}">
+          {.or}
+            <img src="/assets/logo.svg" alt="">
+          {.end}
+        {.end}
+      </div>
+
+      <nav class="topNav" id="topNav">
+        <squarespace:navigation navigationId="mainNav" template="navigation" />
+      </nav>
+    </div>
+  </header>
+
+  <section id="page">
+    <div id="mainContent" role="main" data-content-field="main-content">
