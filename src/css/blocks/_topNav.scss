@@ -1,0 +1,14 @@
+.topNav {
+  color: rgba($black, 0.3);
+  text-transform: uppercase;
+
+  li {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  li:last-child a {
+    @include btnFactory($magenta);
+  }
+}

@@ -1,0 +1,56 @@
+.landing {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.landing--noImage + .landing--noImage {
+  padding-top: 0;
+}
+
+.landing--hasImage {
+  padding-top: 30rem; // TODO change for small viewports
+  padding-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+@mixin landingGradient($color) {
+  background-color: $color;
+
+  &:before {
+    background-color: rgba($color, 0.85);
+    background: linear-gradient(0deg, $color, rgba($color, 0.9) 20%, rgba($color, 0.6) 60%, transparent 100%);
+  }
+
+  .sqs-block-button-element {
+    background-color: $color;
+    // border: 1px solid #fff;
+    // box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  }
+}
+
+.landing--hasImage:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+}
+
+.landing--hasImage,
+.landing--hasImage:nth-child(3n+1) {
+  @include landingGradient($teal);
+}
+
+.landing--hasImage:nth-child(3n+2) {
+  @include landingGradient($olive);
+}
+
+.landing--hasImage:nth-child(3n+3) {
+  @include landingGradient($orange);
+}

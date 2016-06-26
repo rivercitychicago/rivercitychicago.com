@@ -1,14 +1,4 @@
 import path from 'path';
-import autoprefixer from 'autoprefixer';
-import postcssRgbaFallback from 'postcss-color-rgba-fallback';
-import postcssReporter from 'postcss-reporter';
-import postcssImport from 'postcss-import';
-import postcssRoundSubpixels from 'postcss-round-subpixels';
-import postcssBemLinter from 'postcss-bem-linter';
-import postcssCssnext from 'postcss-cssnext';
-import postcssFontMagician from 'postcss-font-magician';
-import postcssDoiuse from 'doiuse';
-import lost from 'lost';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 // import SvgStore from 'webpack-svgstore-plugin';
 import WebpackNotifierPlugin from 'webpack-notifier';
@@ -37,8 +27,8 @@ module.exports = {
   },
 
   externals: {
-    'jquery': 'jQuery',
-    '$': 'jQuery',
+    jquery: 'jQuery',
+    $: 'jQuery',
   },
 
   plugins: [
@@ -51,7 +41,7 @@ module.exports = {
     loaders: [
       { test: /\.json$/, loaders: ['json-loader'] },
       { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css!postcss') },
+      { test: /\.s?css$/, loader: ExtractTextPlugin.extract('style', 'css!postcss!sass') },
       // { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'raw!css/locals?modules!postcss') },
       // { test: /\.css$/, loader: ExtractTextPlugin.extract('tojson!css-loader/locals?modules!postcss') },
       // { test: /\.scss$/, loader: ExtractTextPlugin.extract('style', CSS_LOADERS) },
@@ -62,21 +52,20 @@ module.exports = {
 
   postcss: function postcss() {
     return [
-      postcssImport(),
-      postcssCssnext(),
-      postcssRoundSubpixels(),
-      postcssFontMagician(),
-      postcssRgbaFallback(),
-      lost({
+      require('postcss-cssnext')(),
+      require('postcss-round-subpixels')(),
+      // require('postcss-font-magician')(),
+      require('postcss-hexrgba')(),
+      require('postcss-color-rgba-fallback')(),
+      require('lost')({
         flexbox: 'flex',
         gutter: '2rem',
       }),
-      postcssBemLinter(),
-      postcssDoiuse({
-        browsers: ['ie >= 8', '> 1%'],
-      }),
-      autoprefixer({ browsers: ['last 10 versions'] }),
-      postcssReporter({ clearMessages: true }),
+      require('postcss-bem-linter')(),
+      // require('doiuse')({
+      //   browsers: ['ie >= 9', '> 1%'],
+      // }),
+      require('postcss-reporter')({ clearMessages: true }),
     ];
   },
 

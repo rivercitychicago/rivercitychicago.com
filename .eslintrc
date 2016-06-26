@@ -3,6 +3,11 @@
   "ecmaFeatures": {
     globalReturn: true
   },
+  "rules": {
+    "strict": 0,
+    "max-len": 0,
+    "prefer-template": 0
+  },
   "globals": {
     "$",
     "jQuery",

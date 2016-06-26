@@ -1,0 +1,137 @@
+/*
+ * Button factory
+ *---------------------------------------------------------*/
+
+@mixin btnFactory($bg) {
+  $bgHoverLink: rgba($bg, 0.05);
+  $bgActiveLink: rgba($bg, 0.1);
+  $text: $white;
+
+  background: $bg;
+  color: $text;
+
+  &:link,
+  &:visited {
+    /*color: $text;*/
+  }
+}
+
+/*
+ * Buttons
+ *---------------------------------------------------------*/
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.75em;
+  margin: 0.25rem 0;
+  border: 0;
+  box-shadow: none;
+  /*font-family: fonts(sans-serif);*/
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizelegibility;
+  text-shadow: none;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+  user-select: none;
+  /*@include fontSmoothing(on);*/
+
+  @include btnFactory($black);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 1rem rgba($black, 0.3);
+    outline: none;
+  }
+
+  &:focus:active {
+    box-shadow: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  .icon.left { margin-right: 0.25rem; }
+  .icon.right { margin-left: 0.25rem; }
+}
+
+
+.buttonLink {
+  background: transparent;
+  color: $black;
+  /*@include fontSmoothing(off);*/
+
+  &:hover {
+    background: rgba($black, 0.05);
+  }
+
+  &:active {
+    background: rgba($black, 0.1);
+  }
+
+  .primary {
+    color: $magenta;
+  }
+
+  .secondary {
+    color: $teal;
+  }
+}
+
+
+.large {
+  font-size: 1.25rem;
+}
+
+.pill,
+.small {
+  font-size: 0.875rem;
+}
+
+.pill {
+  padding: 0.75em 1.25em;
+  border-radius: 500px;
+}
+
+.plain {
+  @include btnFactory($black);
+}
+
+.primary {
+  @include btnFactory($magenta);
+}
+
+.secondary {
+  @include btnFactory($teal);
+}
+
+.buttonReset {
+  padding: 0.75rem;
+  border: 0;
+  background: transparent;
+  appearance: none;
+}
+
+
+button:focus {
+  box-shadow: 0 0 3px 2px rgba($teal, 0.7);
+  outline: none;
+}

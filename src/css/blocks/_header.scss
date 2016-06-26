@@ -1,0 +1,25 @@
+.header {
+  padding: 2rem 0;
+  font-family: 'Open Sans', sans-serif;
+
+  .constraint {
+    lost-center: $maxWidth;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5rem;
+    /*lost-center: $maxWidth $pageGutter;*/
+  }
+
+  .logo {
+    height: 100%;
+  }
+
+  .logo img {
+    display: block;
+    /*width: 24rem;*/
+    width: auto;
+    height: 100%;
+  }
+
+  .topNav {}
+}

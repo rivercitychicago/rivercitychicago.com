@@ -1,0 +1,108 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  /** Enable this to see visual grid columns **/
+  /*lost-utility: edit;*/
+  width: 100%;
+  max-width: none;
+  color: $black;
+  /*font-family: 'Open Sans', sans-serif;*/
+  /*font-family: 'Alegreya', serif;*/
+  font-family: $fontSerif;
+  /*font-family: 'PT Serif', serif;*/
+  /*font-family: 'Volkhov', serif;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: $fontSans;
+  text-rendering: optimizeLegibility;
+  /*@include fontSmoothing(on);*/
+
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: 0.25px;
+  /*text-transform: uppercase;*/
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  letter-spacing: 0.25px;
+}
+
+h3 {
+  font-size: 1.625rem;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 1.375rem;
+  line-height: 1.25;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h6 {
+  /*font-family: fonts(sans-serif);*/
+  font-size: 1rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+a {
+  color: $teal;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $teal;
+}
+
+
+p,
+ul,
+ol {
+  margin: 1.1875rem 0;
+  font-size: 1.1875rem;
+  line-height: 1.75;
+  /*@include fontSmoothing(on);*/
+
+  &:first-child { margin-top: 0; }
+  &:last-child { margin-bottom: 0; }
+}
+
+hr {
+  margin: 0.625rem auto;
+  border: 0;
+  border-top: 1px solid #bbb;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+:focus {
+  outline-color: $teal;
+}

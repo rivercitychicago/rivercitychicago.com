@@ -18,6 +18,8 @@ module.exports = function (grunt) {
       production: {
         auth: SFTP_AUTH,
         cache: cacheFile('production'),
+        // cache: false,
+        concurrency: 8,
         src: '.',
         dest: '/rivercitychicago',
         exclusions: [
@@ -54,5 +56,6 @@ module.exports = function (grunt) {
 
   // Tasks.
   grunt.registerTask('deploy', ['sftp-deploy']);
+  // grunt.registerTask('sync', ['sftp-deploy', 'watch']);
 
 };

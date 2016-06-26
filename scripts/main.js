@@ -50,7 +50,7 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/css/index.css\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/css/index.css?");
+	eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/css/index.scss\n ** module id = 1\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/css/index.scss?");
 
 /***/ }
 /******/ ]);
