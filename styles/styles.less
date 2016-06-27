@@ -682,6 +682,53 @@ button:focus {
     /*width: 24rem;*/
     width: auto;
     height: 100%; }
+  .header .topNav {
+    display: none; }
+
+.hero {
+  position: relative;
+  padding: 35% 0 24px;
+  padding: 35% 0 1.5rem;
+  background: url(/assets/ab43958bf740f4099091ffb94af99c1b.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  background-color: #77afa3; }
+  .hero:before {
+    background-color: #77afa3;
+    background-color: rgba(119, 175, 163, 0.85);
+    background: -webkit-linear-gradient(bottom, #77afa3, #77afa3 20%, #77afa3 50%, transparent 100%);
+    background: -webkit-linear-gradient(bottom, rgba(119, 175, 163, 0.95), rgba(119, 175, 163, 0.9) 20%, rgba(119, 175, 163, 0.6) 50%, transparent 100%);
+    background: linear-gradient(0deg, rgba(119, 175, 163, 0.95), rgba(119, 175, 163, 0.9) 20%, rgba(119, 175, 163, 0.6) 50%, transparent 100%); }
+  .hero .sqs-block-button-element {
+    background-color: #77afa3; }
+  .hero .sqs-block-button-element:hover {
+    opacity: 1; }
+
+.hero .title {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.heroContent {
+  position: relative; }
+
+.hero:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ''; }
+
+@media (min-width: 600px) {
+  .hero .title {
+    font-size: 1.5rem; } }
+
+@media (min-width: 900px) {
+  .hero {
+    padding-top: 20rem; }
+  .hero .title {
+    font-size: 1.5rem; } }
 
 .landing {
   position: relative;
@@ -689,6 +736,13 @@ button:focus {
   padding-top: 5rem;
   padding-bottom: 80px;
   padding-bottom: 5rem; }
+
+.landing .sqs-block-button-element {
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  -webkit-transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out; }
+  .landing .sqs-block-button-element:hover {
+    box-shadow: 0 0.25em 0.875em rgba(0, 0, 0, 0.2); }
 
 .landing--noImage + .landing--noImage {
   padding-top: 0; }
@@ -718,37 +772,56 @@ button:focus {
   .landing--hasImage:nth-child(3n+1):before {
     background-color: #77afa3;
     background-color: rgba(119, 175, 163, 0.85);
-    background: -webkit-linear-gradient(bottom, #77afa3, #77afa3 20%, #77afa3 60%, transparent 100%);
-    background: -webkit-linear-gradient(bottom, #77afa3, rgba(119, 175, 163, 0.9) 20%, rgba(119, 175, 163, 0.6) 60%, transparent 100%);
-    background: linear-gradient(0deg, #77afa3, rgba(119, 175, 163, 0.9) 20%, rgba(119, 175, 163, 0.6) 60%, transparent 100%); }
+    background: -webkit-linear-gradient(bottom, #77afa3, #77afa3 20%, #77afa3 50%, transparent 100%);
+    background: -webkit-linear-gradient(bottom, rgba(119, 175, 163, 0.95), rgba(119, 175, 163, 0.9) 20%, rgba(119, 175, 163, 0.6) 50%, transparent 100%);
+    background: linear-gradient(0deg, rgba(119, 175, 163, 0.95), rgba(119, 175, 163, 0.9) 20%, rgba(119, 175, 163, 0.6) 50%, transparent 100%); }
   .landing--hasImage .sqs-block-button-element,
   .landing--hasImage:nth-child(3n+1) .sqs-block-button-element {
-    background-color: #77afa3;
-    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15); }
+    background-color: #77afa3; }
+  .landing--hasImage .sqs-block-button-element:hover,
+  .landing--hasImage:nth-child(3n+1) .sqs-block-button-element:hover {
+    opacity: 1; }
 
 .landing--hasImage:nth-child(3n+2) {
   background-color: #afbb4b; }
   .landing--hasImage:nth-child(3n+2):before {
     background-color: #afbb4b;
     background-color: rgba(175, 187, 75, 0.85);
-    background: -webkit-linear-gradient(bottom, #afbb4b, #afbb4b 20%, #afbb4b 60%, transparent 100%);
-    background: -webkit-linear-gradient(bottom, #afbb4b, rgba(175, 187, 75, 0.9) 20%, rgba(175, 187, 75, 0.6) 60%, transparent 100%);
-    background: linear-gradient(0deg, #afbb4b, rgba(175, 187, 75, 0.9) 20%, rgba(175, 187, 75, 0.6) 60%, transparent 100%); }
+    background: -webkit-linear-gradient(bottom, #afbb4b, #afbb4b 20%, #afbb4b 50%, transparent 100%);
+    background: -webkit-linear-gradient(bottom, rgba(175, 187, 75, 0.95), rgba(175, 187, 75, 0.9) 20%, rgba(175, 187, 75, 0.6) 50%, transparent 100%);
+    background: linear-gradient(0deg, rgba(175, 187, 75, 0.95), rgba(175, 187, 75, 0.9) 20%, rgba(175, 187, 75, 0.6) 50%, transparent 100%); }
   .landing--hasImage:nth-child(3n+2) .sqs-block-button-element {
-    background-color: #afbb4b;
-    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15); }
+    background-color: #afbb4b; }
+  .landing--hasImage:nth-child(3n+2) .sqs-block-button-element:hover {
+    opacity: 1; }
 
 .landing--hasImage:nth-child(3n+3) {
   background-color: #bb6534; }
   .landing--hasImage:nth-child(3n+3):before {
     background-color: #bb6534;
     background-color: rgba(187, 101, 52, 0.85);
-    background: -webkit-linear-gradient(bottom, #bb6534, #bb6534 20%, #bb6534 60%, transparent 100%);
-    background: -webkit-linear-gradient(bottom, #bb6534, rgba(187, 101, 52, 0.9) 20%, rgba(187, 101, 52, 0.6) 60%, transparent 100%);
-    background: linear-gradient(0deg, #bb6534, rgba(187, 101, 52, 0.9) 20%, rgba(187, 101, 52, 0.6) 60%, transparent 100%); }
+    background: -webkit-linear-gradient(bottom, #bb6534, #bb6534 20%, #bb6534 50%, transparent 100%);
+    background: -webkit-linear-gradient(bottom, rgba(187, 101, 52, 0.95), rgba(187, 101, 52, 0.9) 20%, rgba(187, 101, 52, 0.6) 50%, transparent 100%);
+    background: linear-gradient(0deg, rgba(187, 101, 52, 0.95), rgba(187, 101, 52, 0.9) 20%, rgba(187, 101, 52, 0.6) 50%, transparent 100%); }
   .landing--hasImage:nth-child(3n+3) .sqs-block-button-element {
-    background-color: #bb6534;
-    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15); }
+    background-color: #bb6534; }
+  .landing--hasImage:nth-child(3n+3) .sqs-block-button-element:hover {
+    opacity: 1; }
+
+.page {
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+@media (min-width: 900px) {
+  .page {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; } }
+
+.title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-transform: uppercase; }
 
 .topNav {
   color: #1d1d1c;

@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  // padding: 6rem 0 1rem;
+  padding: 35% 0 1.5rem;
+  background: url('../images/defaults/081.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  @include heroGradient($teal);
+}
+
+.hero .title {
+  font-size: 1.125rem;
+}
+
+.heroContent {
+  position: relative;
+}
+
+.hero:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+}
+
+@media (min-width: 600px) {
+  .hero .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding-top: 20rem;
+  }
+
+  .hero .title {
+    font-size: 1.5rem;
+  }
+}

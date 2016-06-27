@@ -7,3 +7,21 @@
     -webkit-font-smoothing: subpixel-antialiased;
   }
 }
+
+
+@mixin heroGradient($color) {
+  background-color: $color;
+
+  &:before {
+    background-color: rgba($color, 0.85);
+    background: linear-gradient(0deg, rgba($color, 0.95), rgba($color, 0.9) 20%, rgba($color, 0.6) 50%, transparent 100%);
+  }
+
+  .sqs-block-button-element {
+    background-color: $color;
+  }
+
+  .sqs-block-button-element:hover {
+    opacity: 1;
+  }
+}

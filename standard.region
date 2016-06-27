@@ -1,3 +1,11 @@
-<div class="grid--max grid--gutter">
+{.section collection}
+  <div class="hero" {.if mainImage}style="background-image: url('{mainImage.assetUrl}?format=1500w');"{.end}>
+    <div class="heroContent grid--max grid--gutter">
+      <h1 class="title">{title}</h1>
+    </div>
+  </div>
+{.end}
+
+<div class="page grid--max grid--gutter">
   {squarespace.main-content}
 </div>

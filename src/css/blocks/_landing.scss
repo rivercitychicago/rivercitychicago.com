@@ -4,6 +4,14 @@
   padding-bottom: 5rem;
 }
 
+.landing .sqs-block-button-element {
+  // border: 1px solid #fff;
+  // box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.15s ease-in-out;
+  &:hover { box-shadow: 0 0.25em 0.875em rgba(0, 0, 0, 0.2); }
+}
+
 .landing--noImage + .landing--noImage {
   padding-top: 0;
 }
@@ -17,22 +25,6 @@
   color: #fff;
 }
 
-@mixin landingGradient($color) {
-  background-color: $color;
-
-  &:before {
-    background-color: rgba($color, 0.85);
-    background: linear-gradient(0deg, $color, rgba($color, 0.9) 20%, rgba($color, 0.6) 60%, transparent 100%);
-  }
-
-  .sqs-block-button-element {
-    background-color: $color;
-    // border: 1px solid #fff;
-    // box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
-  }
-}
-
 .landing--hasImage:before {
   position: absolute;
   top: 0;
@@ -44,13 +36,13 @@
 
 .landing--hasImage,
 .landing--hasImage:nth-child(3n+1) {
-  @include landingGradient($teal);
+  @include heroGradient($teal);
 }
 
 .landing--hasImage:nth-child(3n+2) {
-  @include landingGradient($olive);
+  @include heroGradient($olive);
 }
 
 .landing--hasImage:nth-child(3n+3) {
-  @include landingGradient($orange);
+  @include heroGradient($orange);
 }
