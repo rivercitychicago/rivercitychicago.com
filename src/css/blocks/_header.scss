@@ -1,12 +1,13 @@
 .header {
-  padding: 2rem 0;
-  font-family: 'Open Sans', sans-serif;
+  padding: 0.75rem 0;
+  font-family: $fontSans;
 
   .constraint {
+    position: relative;
     lost-center: $maxWidth;
     justify-content: space-between;
     align-items: center;
-    height: 5.5rem;
+    height: 2.5rem;
     /*lost-center: $maxWidth $pageGutter;*/
   }
 
@@ -16,12 +17,55 @@
 
   .logo img {
     display: block;
-    /*width: 24rem;*/
     width: auto;
     height: 100%;
   }
+}
 
-  .topNav {
-    display: none; // TODO remove
+.header__navItems {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  text-align: right;
+}
+
+.mobileNavToggle {
+  display: flex;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 1.5rem;
+  visibility: hidden;
+  --webkit-appearance: none;
+  &:focus { box-shadow: none; }
+
+  &.STATE--visible {
+    visibility: visible;
+  }
+}
+
+@media (min-width: 400px) {
+  .header__navItems {
+    width: 50%;
+  }
+}
+
+@media (min-width: 600px) {
+  .header__navItems {
+    width: 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .header .constraint {
+    height: 3.5rem;
   }
 }

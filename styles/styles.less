@@ -651,10 +651,11 @@ button:focus {
   color: #fff; }
 
 .header {
-  padding: 32px 0;
-  padding: 2rem 0;
-  font-family: 'Open Sans', sans-serif; }
+  padding: 12px 0;
+  padding: 0.75rem 0;
+  font-family: "Open Sans", Helvetica, sans-serif; }
   .header .constraint {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     max-width: 1200px;
@@ -672,18 +673,59 @@ button:focus {
         -ms-flex-align: center;
                 -ms-grid-row-align: center;
             align-items: center;
-    height: 88px;
-    height: 5.5rem;
+    height: 40px;
+    height: 2.5rem;
     /*lost-center: $maxWidth $pageGutter;*/ }
   .header .logo {
     height: 100%; }
   .header .logo img {
     display: block;
-    /*width: 24rem;*/
     width: auto;
     height: 100%; }
-  .header .topNav {
-    display: none; }
+
+.header__navItems {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 20%;
+  text-align: right; }
+
+.mobileNavToggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  font-size: 1.5rem;
+  visibility: hidden;
+  --webkit-appearance: none; }
+  .mobileNavToggle:focus {
+    box-shadow: none; }
+  .mobileNavToggle.STATE--visible {
+    visibility: visible; }
+
+@media (min-width: 400px) {
+  .header__navItems {
+    width: 50%; } }
+
+@media (min-width: 600px) {
+  .header__navItems {
+    width: 60%; } }
+
+@media (min-width: 900px) {
+  .header {
+    padding: 1rem 0; }
+  .header .constraint {
+    height: 3.5rem; } }
 
 .hero {
   position: relative;
@@ -811,6 +853,9 @@ button:focus {
   .landing--hasImage {
     padding-top: 30rem; } }
 
+body .material-icons {
+  font-size: 1.5em; }
+
 .page {
   padding-top: 5%;
   padding-bottom: 5%; }
@@ -829,7 +874,13 @@ button:focus {
 .topNav {
   color: #1d1d1c;
   color: rgba(29, 29, 28, 0.3);
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  visibility: hidden; }
+  .topNav.STATE--visible {
+    visibility: visible; }
+  .topNav ul {
+    padding: 0;
+    margin: 0; }
   .topNav li {
     display: inline-block;
     font-size: 16px;
@@ -840,3 +891,51 @@ button:focus {
     color: #fff; }
     .topNav li:last-child a:link, .topNav li:last-child a:visited {
       /*color: $text;*/ }
+/* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
+   You need this once per page no matter how many menu trees or different themes you use.
+-------------------------------------------------------------------------------------------*/
+.sm {
+  position: relative;
+  z-index: 9999; }
+
+.sm, .sm ul, .sm li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  direction: ltr;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent; }
+
+.sm-rtl, .sm-rtl ul, .sm-rtl li {
+  direction: rtl;
+  text-align: right; }
+
+.sm > li > h1, .sm > li > h2, .sm > li > h3, .sm > li > h4, .sm > li > h5, .sm > li > h6 {
+  margin: 0;
+  padding: 0; }
+
+.sm ul {
+  display: none; }
+
+.sm li, .sm a {
+  position: relative; }
+
+.sm a {
+  display: block; }
+
+.sm a.disabled {
+  cursor: not-allowed; }
+
+.sm:after {
+  content: "\A0";
+  display: block;
+  height: 0;
+  font: 0px/0 serif;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.sm, .sm *, .sm *:before, .sm *:after {
+  box-sizing: border-box; }

@@ -8,27 +8,41 @@
   <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
   <!-- <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Open+Sans:400,700|Lora:400,400italic,700,700italic|PT+Serif:400,400italic,700,700italic|Volkhov:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <squarespace:script src="main.js" />
 </head>
 
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.section logoImageUrl} logo-image{.or} site-title{.end}{.end}">
 
   <header id="header" class="header">
-    <div class="constraint grid--gutter">
-      <div id="logo" class="logo" data-content-field="site-title">
-        {.section website}
-          {.section logoImageUrl}
-            <img src="{@}">
-          {.or}
-            <img src="/assets/logo.svg" alt="">
-          {.end}
-        {.end}
-      </div>
+    <div class="grid--gutter">
+      <div class="constraint">
 
-      <nav class="topNav" id="topNav">
-        <squarespace:navigation navigationId="mainNav" template="navigation" />
-      </nav>
+        <div id="logo" class="logo" data-content-field="site-title">
+          {.section website}
+            {.section logoImageUrl}
+              <img src="{@}">
+            {.or}
+              <img src="/assets/logo.svg" alt="">
+            {.end}
+          {.end}
+        </div>
+
+        <div class="header__navItems">
+          <nav class="topNav" id="topNav">
+            <squarespace:navigation navigationId="mainNav" template="navigation" />
+          </nav>
+        </div>
+
+        <div class="header__navItems">
+          <button type="button" class="mobileNavToggle" id="mobileNavToggle">
+            <i class="material-icons">&#xE5D2;</i>
+          </button>
+        </div>
+
+      </div>
     </div>
   </header>
 
