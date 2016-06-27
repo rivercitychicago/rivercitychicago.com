@@ -1,11 +1,8 @@
 {.section collection}
-  <!-- <h1>Landing Page Title: {title}</h1> -->
   {.repeated section collections}
-    <!-- <h2>Section Title: {title}</h2> -->
     <div class="landing {.section mainImage}landing--hasImage{.or}landing--noImage{.end}"
           {.section mainImage}style="background-image: url('{assetUrl}?format=1500w')"{.or}{.end}>
       <div class="grid--max grid--gutter">
-        <!-- <img {mainImage|image-meta} /> -->
         {.section mainContent}
           <div class="landing__contentWrap">
             <div class="content">{@}</div>

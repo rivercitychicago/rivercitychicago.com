@@ -5,8 +5,6 @@
 }
 
 .landing .sqs-block-button-element {
-  // border: 1px solid #fff;
-  // box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.15s ease-in-out;
   &:hover { box-shadow: 0 0.25em 0.875em rgba(0, 0, 0, 0.2); }
@@ -17,7 +15,7 @@
 }
 
 .landing--hasImage {
-  padding-top: 30rem; // TODO change for small viewports
+  padding-top: 40%;
   padding-bottom: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,4 +43,10 @@
 
 .landing--hasImage:nth-child(3n+3) {
   @include heroGradient($orange);
+}
+
+@media (min-width: 900px) {
+  .landing--hasImage {
+    padding-top: 30rem;
+  }
 }
