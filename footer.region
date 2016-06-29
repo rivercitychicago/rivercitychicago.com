@@ -18,7 +18,7 @@
 
     <nav class="footer__nav">
       <div class="grid--max grid--gutter">
-        <squarespace:navigation navigationId="mainNav" template="footer-navigation" />
+        <squarespace:navigation navigationId="secondaryNav" template="footer-navigation" />
       </div>
     </nav>
 
