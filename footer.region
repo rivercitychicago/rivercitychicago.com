@@ -4,7 +4,7 @@
   <footer class="footer" id="footer">
 
     {.section website}{.if socialAccounts}
-      <div class="footer__nav" data-content-field="connected-accounts">
+      <div class="footer__social" data-content-field="connected-accounts">
         <div class="grid--max grid--gutter">
           {.repeated section socialAccounts}
             <a
@@ -15,6 +15,12 @@
         </div>
       </div>
     {.end}{.end}
+
+    <nav class="footer__nav">
+      <div class="grid--max grid--gutter">
+        <squarespace:navigation navigationId="mainNav" template="footer-navigation" />
+      </div>
+    </nav>
 
     <div class="footer__info">
       <div class="grid--max grid--gutter">
