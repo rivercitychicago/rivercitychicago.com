@@ -1,0 +1,9 @@
+<a href="/">
+  {.section website}
+    {.section logoImageUrl}
+      <img src="{@}" alt="{website.siteTitle}">
+    {.or}
+      <img src="/assets/logo.svg" alt="{website.siteTitle}">
+    {.end}
+  {.end}
+</a>

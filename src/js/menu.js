@@ -1,18 +1,18 @@
 import $ from 'jquery';
-import 'smartmenus';
-import 'smartmenus/src/css/sm-core-css.css';
+// import 'smartmenus';
+// import 'smartmenus/src/css/sm-core-css.css';
 import FitNav from './lib/fitnav';
 
 $(() => {
   const $nav = $('#topNav');
   const $menu = $nav.find('> ul');
-  const $mobileNav = $('#mobileNav');
+  const $mobileNav = $('#menu');
   const $toggle = $('#mobileNavToggle');
 
-  $menu.smartmenus({
-    subIndicatorsPos: 'append',
-    // subIndicatorsText: '\u25BC',
-  });
+  // $menu.smartmenus({
+  //   subIndicatorsPos: 'append',
+  //   // subIndicatorsText: '\u25BC',
+  // });
 
   const visibleClass = 'STATE--visible';
 

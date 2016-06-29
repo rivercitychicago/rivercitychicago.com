@@ -135,3 +135,12 @@ button:focus {
   box-shadow: 0 0 3px 2px rgba($teal, 0.7);
   outline: none;
 }
+
+body .sqs-block-button .sqs-block-button-element {
+  @include fontSmoothing();
+}
+
+body .sqs-block-button .sqs-block-button-element--medium {
+  font-family: $fontSans;
+  font-weight: bold;
+}

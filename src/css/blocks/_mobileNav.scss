@@ -1,0 +1,59 @@
+.mobileNav {
+  padding: 1rem 0;
+  // background: #fff;
+  background: darken($magenta, 4);
+  font-family: $fontSans;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 0.25rem $pageGutter;
+    color: #fff;
+    // color: $black;
+    font-size: 1.25rem;
+  }
+
+  .mobileNav__close {
+    display: none;
+  }
+}
+
+.js .mobileNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  // background: rgba(#fff, 0.95);
+  background: rgba($magenta, 0.95);
+  transform: translateY(0.5rem);
+  transition: opacity 0.3s ease-in-out, transform 0.15s ease-in-out;
+
+  &#{$visibleClass} {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobileNav__close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    padding: 0;
+  }
+}

@@ -1,5 +1,5 @@
 .topNav {
-  color: rgba($black, 0.3);
+  color: $black;
   text-transform: uppercase;
   visibility: hidden;
 
@@ -20,5 +20,9 @@
 
   li:last-child a {
     @include btnFactory($magenta);
+  }
+
+  a:hover {
+    color: $black;
   }
 }

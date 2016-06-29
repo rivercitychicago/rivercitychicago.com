@@ -1,25 +1,67 @@
     </div>
   </section>
 
-  <div id="footerWrapper" class="footer">
-    <div class="grid--max grid--gutter">
-      <footer id="footer">
-        <squarespace:block-field id="footerBlocks-1" columns="12" label="Footer Content" />
-        {.section website}
-          {.if socialAccounts}
-          <div id="footerBlocks-2" class="social-links" data-content-field="connected-accounts">
-            {.repeated section socialAccounts}<a{.if profileUrl} href="{profileUrl}" target="_blank"{.or} title="{screenname}"{.end} class="social-{serviceName}"></a>{.end}
-          </div>
-          {.end}
-        {.end}
-      </footer>
-      <div class="sqs-footer-injection">{squarespace-footers}</div>
-    </div>
-  </div>
+  <footer class="footer" id="footer">
 
-  <nav class="mobileNav" id="mobileNav">
-    <squarespace:navigation navigationId="mainNav" template="navigation" />
+    {.section website}{.if socialAccounts}
+      <div class="footer__nav" data-content-field="connected-accounts">
+        <div class="grid--max grid--gutter">
+          {.repeated section socialAccounts}
+            <a
+              {.if profileUrl} href="{profileUrl}" target="_blank"
+              {.or} title="{screenname}"{.end}
+              class="social-{serviceName}"></a>
+          {.end}
+        </div>
+      </div>
+    {.end}{.end}
+
+    <div class="footer__info">
+      <div class="grid--max grid--gutter">
+
+        {.section websiteSettings}
+          <ul class="footer__contact">
+            {.if contactPhoneNumber}
+              <li>
+                <i class="material-icons">&#xE0CD;</i>
+                <a href="tel:{contactPhoneNumber}">{contactPhoneNumber}</a>
+              </li>
+            {.end}
+            {.if contactEmail}
+              <li>
+                <i class="material-icons">&#xE0BE;</i>
+                <a href="mailto:{contactEmail}">{contactEmail}</a>
+              </li>
+            {.end}
+          </ul>
+        {.end}
+
+        {.if website.location}
+          <p class="footer__location">
+            <i class="material-icons">&#xE55F;</i>
+            <a href="https://www.google.com/maps/place/River+City+Community+Church/@41.9036141,-87.7224334,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd299331c095d:0x5a265f0638100305!8m2!3d41.9036141!4d-87.7202447" target="_blank">
+              {website.location.addressLine1}, {website.location.addressLine2}
+            </a>
+          </p>
+        {.end}
+
+        <div class="footer__copyright">
+          <squarespace:block-field id="footerBlocks-1" columns="12" label="Footer Content" />
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <nav class="mobileNav" id="menu">
+    <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
+    <a href="#menu" class="mobileNav__close" data-mobile-nav-toggle>
+      <i class="material-icons">&#xE5CD;</i>
+    </a>
   </nav>
+
+  {squarespace-footers}
 
 </body>
 </html>

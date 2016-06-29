@@ -21,13 +21,7 @@
       <div class="constraint">
 
         <div id="logo" class="logo" data-content-field="site-title">
-          {.section website}
-            {.section logoImageUrl}
-              <img src="{@}">
-            {.or}
-              <img src="/assets/logo.svg" alt="">
-            {.end}
-          {.end}
+          {@|apply logo-link.block}
         </div>
 
         <div class="header__navItems">
@@ -37,9 +31,9 @@
         </div>
 
         <div class="header__navItems">
-          <button type="button" class="mobileNavToggle" id="mobileNavToggle">
+          <a href="#menu" class="mobileNavToggle" id="mobileNavToggle" data-mobile-nav-toggle>
             <i class="material-icons">&#xE5D2;</i>
-          </button>
+          </a>
         </div>
 
       </div>

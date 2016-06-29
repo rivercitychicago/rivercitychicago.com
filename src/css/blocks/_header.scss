@@ -38,12 +38,23 @@
   padding: 0;
   border: 0;
   background: transparent;
+  color: $black;
   font-size: 1.5rem;
-  visibility: hidden;
-  --webkit-appearance: none;
-  &:focus { box-shadow: none; }
 
-  &.STATE--visible {
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:active {
+    color: $black;
+  }
+
+  .js & {
+    visibility: hidden;
+  }
+
+  .js &#{$visibleClass} {
     visibility: visible;
   }
 }

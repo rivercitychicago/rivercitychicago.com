@@ -374,10 +374,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 16px;
-  margin-top: 1rem;
-  margin-bottom: 16px;
-  margin-bottom: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-family: "Open Sans", Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   /*@include fontSmoothing(on);*/ }
@@ -397,37 +395,31 @@ h6 {
     margin-bottom: 0; }
 
 h1 {
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.25;
   letter-spacing: 0px;
   /*text-transform: uppercase;*/ }
 
 h2 {
-  font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 1.875em;
   line-height: 1.25;
   letter-spacing: 0px; }
 
 h3 {
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 1.625em;
   line-height: 1.25; }
 
 h4 {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 1.375em;
   line-height: 1.25; }
 
 h5 {
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   line-height: 1.5; }
 
 h6 {
   /*font-family: fonts(sans-serif);*/
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.5;
   text-transform: uppercase; }
 
@@ -443,8 +435,7 @@ ul,
 ol {
   margin: 19px 0;
   margin: 1.1875rem 0;
-  font-size: 19px;
-  font-size: 1.1875rem;
+  font-size: 1.1875em;
   line-height: 1.75;
   /*@include fontSmoothing(on);*/ }
   p:first-child,
@@ -644,11 +635,70 @@ button:focus {
   box-shadow: 0 0 3px 2px rgba(119, 175, 163, 0.7);
   outline: none; }
 
+body .sqs-block-button .sqs-block-button-element {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+body .sqs-block-button .sqs-block-button-element--medium {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: bold; }
+
 .footer {
+  background: #b93758;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-align: center; }
+  .footer a {
+    color: #fff; }
+
+.footer__nav {
+  padding: 64px 0;
+  padding: 4rem 0; }
+  .footer__nav a {
+    margin: 4px 6px;
+    margin: 0.25rem 0.375rem;
+    font-size: 32px;
+    font-size: 2rem; }
+
+.footer__info {
   padding: 64px 0;
   padding: 4rem 0;
-  background: #b93758;
-  color: #fff; }
+  background: #b13554; }
+
+.footer__contact,
+.footer__location {
+  font-size: 14px;
+  font-size: 0.875rem; }
+  .footer__contact a:hover,
+  .footer__location a:hover {
+    text-decoration: underline; }
+  .footer__contact a,
+  .footer__contact i,
+  .footer__location a,
+  .footer__location i {
+    vertical-align: middle; }
+  .footer__contact i,
+  .footer__location i {
+    margin-right: 0.25em; }
+
+.footer__contact {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .footer__contact li {
+    display: inline-block;
+    margin: 0.5em 0.75em; }
+
+.footer__location {
+  margin: 0.5em 0; }
+
+.footer__copyright {
+  margin-top: 48px;
+  margin-top: 3rem;
+  font-size: 10px;
+  font-size: 0.625rem; }
+  .footer__copyright .sqs-block:last-child {
+    padding-bottom: 0; }
 
 .header {
   padding: 12px 0;
@@ -704,13 +754,16 @@ button:focus {
   padding: 0;
   border: 0;
   background: transparent;
+  color: #1d1d1c;
   font-size: 24px;
-  font-size: 1.5rem;
-  visibility: hidden;
-  --webkit-appearance: none; }
+  font-size: 1.5rem; }
   .mobileNavToggle:focus {
     box-shadow: none; }
-  .mobileNavToggle.STATE--visible {
+  .mobileNavToggle:hover, .mobileNavToggle:active {
+    color: #1d1d1c; }
+  .js .mobileNavToggle {
+    visibility: hidden; }
+  .js .mobileNavToggle.STATE--visible {
     visibility: visible; }
 
 @media (min-width: 400px) {
@@ -856,6 +909,68 @@ button:focus {
 body .material-icons {
   font-size: 1.5em; }
 
+.mobileNav {
+  padding: 16px 0;
+  padding: 1rem 0;
+  background: #a93251;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .mobileNav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .mobileNav a {
+    display: block;
+    padding: 4px 20px;
+    padding: 0.25rem 1.25rem;
+    color: #fff;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .mobileNav .mobileNav__close {
+    display: none; }
+
+.js .mobileNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  background: #b93758;
+  background: rgba(185, 55, 88, 0.95);
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.15s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out; }
+  .js .mobileNav.STATE--visible {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  .js .mobileNav .mobileNav__close {
+    display: block;
+    position: absolute;
+    top: 16px;
+    top: 1rem;
+    right: 16px;
+    right: 1rem;
+    z-index: 2;
+    padding: 0; }
+
 .page {
   padding-top: 5%;
   padding-bottom: 5%; }
@@ -873,7 +988,6 @@ body .material-icons {
 
 .topNav {
   color: #1d1d1c;
-  color: rgba(29, 29, 28, 0.3);
   text-transform: uppercase;
   visibility: hidden; }
   .topNav.STATE--visible {
@@ -891,51 +1005,5 @@ body .material-icons {
     color: #fff; }
     .topNav li:last-child a:link, .topNav li:last-child a:visited {
       /*color: $text;*/ }
-/* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
-   You need this once per page no matter how many menu trees or different themes you use.
--------------------------------------------------------------------------------------------*/
-.sm {
-  position: relative;
-  z-index: 9999; }
-
-.sm, .sm ul, .sm li {
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  direction: ltr;
-  text-align: left;
-  -webkit-tap-highlight-color: transparent; }
-
-.sm-rtl, .sm-rtl ul, .sm-rtl li {
-  direction: rtl;
-  text-align: right; }
-
-.sm > li > h1, .sm > li > h2, .sm > li > h3, .sm > li > h4, .sm > li > h5, .sm > li > h6 {
-  margin: 0;
-  padding: 0; }
-
-.sm ul {
-  display: none; }
-
-.sm li, .sm a {
-  position: relative; }
-
-.sm a {
-  display: block; }
-
-.sm a.disabled {
-  cursor: not-allowed; }
-
-.sm:after {
-  content: "\A0";
-  display: block;
-  height: 0;
-  font: 0px/0 serif;
-  clear: both;
-  visibility: hidden;
-  overflow: hidden; }
-
-.sm, .sm *, .sm *:before, .sm *:after {
-  box-sizing: border-box; }
+  .topNav a:hover {
+    color: #1d1d1c; }
