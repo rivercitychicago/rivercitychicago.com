@@ -33,7 +33,7 @@ module.exports = {
 
   plugins: [
     new WebpackNotifierPlugin(),
-    new ExtractTextPlugin('styles/styles.less', { allChunks: true }),
+    new ExtractTextPlugin('styles/styles.css', { allChunks: true }),
     // new SvgStore('sprites/icons/**/*.svg', 'assets', { name: 'icons.svg' }),
   ],
 
@@ -52,15 +52,15 @@ module.exports = {
 
   postcss: function postcss() {
     return [
+      require('lost')({
+        flexbox: 'flex',
+        gutter: '2rem',
+      }),
       require('postcss-cssnext')(),
       require('postcss-round-subpixels')(),
       // require('postcss-font-magician')(),
       require('postcss-hexrgba')(),
       require('postcss-color-rgba-fallback')(),
-      require('lost')({
-        flexbox: 'flex',
-        gutter: '2rem',
-      }),
       require('postcss-bem-linter')(),
       // require('doiuse')({
       //   browsers: ['ie >= 9', '> 1%'],

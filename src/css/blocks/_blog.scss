@@ -1,0 +1,34 @@
+.blog__article {
+  margin-bottom: 3rem;
+}
+
+.blog__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog__info {
+  a {
+    color: $orange;
+  }
+}
+
+.blog__date {
+  font-style: italic;
+}
+
+.blog__engagement {
+  margin-top: 0.75rem;
+
+  .squarespace-social-buttons {
+    font-family: $fontSans;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 600px) {
+  .blog__title {
+    font-size: 2rem;
+  }
+}

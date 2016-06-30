@@ -1,0 +1,24 @@
+<header class="hero hero--blog"
+  {.if collection.mainImage}style="background-image: url('{collection.mainImage.assetUrl}?format=1500w');"{.end}>
+  <div class="hero__content grid--max grid--gutter">
+    {.if item}
+      <h1 class="title">{item.title}</h1>
+      <h3 class="hero__meta">
+        <time datetime="{addedOn|date %F}">{item.addedOn|date %B %d, %Y}</time>
+      </h3>
+    {.or}
+      <h1 class="title">{collection.title}</h1>
+    {.end}
+  </div>
+</header>
+
+<div class="page grid--max grid--gutter">
+  <div class="grid--row">
+    <div class="grid--primary">
+      {squarespace.main-content}
+    </div>
+    <div class="grid--secondary">
+      <squarespace:block-field id="blogSidebar" label="Blog Sidebar Content" />
+    </div>
+  </div>
+</div>

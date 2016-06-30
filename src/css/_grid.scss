@@ -2,7 +2,31 @@
   lost-center: $maxWidth 0 no-flex;
 }
 
+.grid--row {
+  lost-flex-container: row;
+}
+
+.grid--primary + .grid--secondary {
+  margin-top: 2rem;
+}
+
 .grid--gutter {
   padding-right: $pageGutter;
   padding-left: $pageGutter;
+}
+
+@media (min-width: 900px) {
+  .grid--primary {
+    width: 99.99% * 3/4 - 2.666666667%;
+    margin-right: 2.666666667%;
+  }
+
+  .grid--secondary {
+    width: 99.99% * 1/4;
+    padding: 1rem 0;
+  }
+
+  .grid--primary + .grid--secondary {
+    margin-top: 0;
+  }
 }

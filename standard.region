@@ -1,9 +1,9 @@
 {.section collection}
-  <div class="hero" {.if mainImage}style="background-image: url('{mainImage.assetUrl}?format=1500w');"{.end}>
-    <div class="heroContent grid--max grid--gutter">
+  <header class="hero" {.if mainImage}style="background-image: url('{mainImage.assetUrl}?format=1500w');"{.end}>
+    <div class="hero__content grid--max grid--gutter">
       <h1 class="title">{title}</h1>
     </div>
-  </div>
+  </header>
 {.end}
 
 <div class="page grid--max grid--gutter">
