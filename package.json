@@ -1,17 +1,15 @@
 {
   "name": "rivercitychicago.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website for River City Community Church.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run dist && ./node_modules/.bin/grunt deploy --verbose",
     "sync": "./node_modules/.bin/grunt watch --verbose",
-    "server": "./node_modules/.bin/sqs server --reload",
-    "buster": "./node_modules/.bin/sqs buster",
-    "assets-dist": "webpack --config webpack/dist.babel.js --colors --progress --display-error-details",
-    "assets-watch": "webpack --config webpack/watch.babel.js --colors --progress --display-error-details",
-    "start": "./node_modules/.bin/concurrent \"npm run assets-watch\" \"npm run server\""
+    "build": "webpack --config webpack/dist.babel.js --colors --progress --display-error-details",
+    "assets:watch": "webpack --config webpack/watch.babel.js --colors --progress --display-error-details",
+    "start": "npm run assets:watch"
   },
   "repository": {
     "type": "git",
@@ -45,7 +43,6 @@
     "lodash": "^3.10.1",
     "lost": "^6.6.2",
     "node-sass": "^3.3.3",
-    "node-squarespace-server": "^0.5",
     "normalize.css": "^3.0.3",
     "postcss": "^5.0.14",
     "postcss-bem-linter": "^2.3.0",
