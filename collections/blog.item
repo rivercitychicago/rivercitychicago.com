@@ -1,6 +1,6 @@
 {.section item}
 
-<article class="{@|item-classes}" id="article-{id}" data-item-id="{id}">
+<article class="{@|item-classes} blogPost" id="article-{id}" data-item-id="{id}">
   {.section body}<div class="body entry-content">{@}</div>{.end}
 	{.passthrough?}{.or}{.section sourceUrl}<div class="entry-source">Source: <a href="{sourceUrl}" target="_blank">{sourceUrl|truncate 42}</a></div>{.end}{.end}
 
@@ -22,11 +22,22 @@
 <!--PAGINATION-->
 
 {.section pagination}
-  <br>
-  <hr>
-  <br>
-  <nav class="pagination clear">
-    {.section prevItem}<a class="prev-item" href="{fullUrl}">&larr; {title}</a><br>{.end}
-    {.section nextItem}<a class="next-item" href="{fullUrl}">{title} &rarr;</a>{.end}
+  <nav class="pagination">
+    <div class="pagination_prev">
+      {.section prevItem}
+        <a href="{fullUrl}" class="pagination_link">
+          <i class="material-icons pagination_icon">&#xE5CB;</i>
+          <div class="pagination_text">{title}</div>
+        </a>
+      {.end}
+    </div>
+    <div class="pagination_next">
+      {.section nextItem}
+        <a href="{fullUrl}" class="pagination_link">
+          <div class="pagination_text">{title}</div>
+          <i class="material-icons pagination_icon">&#xE5CC;</i>
+        </a>
+      {.end}
+    </div>
   </nav>
 {.end}

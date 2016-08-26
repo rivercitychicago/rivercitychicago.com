@@ -1,18 +1,10 @@
-* {
-  -webkit-font-smoothing: antialiased;
-}
-
 body {
   /** Enable this to see visual grid columns **/
   /*lost-utility: edit;*/
   width: 100%;
   max-width: none;
   color: $black;
-  /*font-family: 'Open Sans', sans-serif;*/
-  /*font-family: 'Alegreya', serif;*/
   font-family: $fontSerif;
-  /*font-family: 'PT Serif', serif;*/
-  /*font-family: 'Volkhov', serif;*/
 }
 
 h1,
@@ -21,11 +13,10 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.625em;
+  margin-bottom: 0.625em;
   font-family: $fontSans;
   text-rendering: optimizeLegibility;
-  /*@include fontSmoothing(on);*/
 
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }
@@ -33,20 +24,20 @@ h6 {
 
 h1 {
   font-size: 2em;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: 0.25px;
-  /*text-transform: uppercase;*/
 }
 
 h2 {
-  font-size: 1.875em;
+  font-size: 1.75em;
   line-height: 1.25;
   letter-spacing: 0.25px;
 }
 
 h3 {
-  font-size: 1.625em;
+  font-size: 1.5em;
   line-height: 1.25;
+  letter-spacing: 0.25px;
 }
 
 h4 {
@@ -60,7 +51,6 @@ h5 {
 }
 
 h6 {
-  /*font-family: fonts(sans-serif);*/
   font-size: 1em;
   line-height: 1.5;
   text-transform: uppercase;
@@ -80,9 +70,13 @@ p,
 ul,
 ol {
   margin: 1.1875rem 0;
-  font-size: 1.1875em;
-  line-height: 1.75;
-  /*@include fontSmoothing(on);*/
+  font-size: 1.375em;
+  line-height: 1.65;
+
+  em,
+  strong {
+    line-height: 1;
+  }
 
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }

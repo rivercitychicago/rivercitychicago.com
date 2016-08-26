@@ -25,3 +25,9 @@
     clear: none !important;
   }
 }
+
+// Image captions
+.sqs-block-image .sqs-image-caption p,
+.sqs-block-image .image-caption p {
+  font-size: 1rem;
+}

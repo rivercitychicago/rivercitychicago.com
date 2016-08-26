@@ -44,7 +44,7 @@
   cursor: pointer;
   appearance: none;
   user-select: none;
-  /*@include fontSmoothing(on);*/
+  @include fontSmoothing(on);
 
   @include btnFactory($black);
 

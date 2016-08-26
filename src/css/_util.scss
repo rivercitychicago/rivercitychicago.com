@@ -9,6 +9,19 @@
 }
 
 
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
 @mixin heroGradient($color) {
   background-color: $color;
 

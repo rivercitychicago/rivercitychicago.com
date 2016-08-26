@@ -55,9 +55,32 @@
 <!--PAGINATION-->
 
 {.section pagination}
-  <hr>
-  <br>
   <nav class="pagination">
-    {.if pagination.prevPage}<a href="{prevPageUrl}">&larr; Newer</a>{.or}&larr; Newer{.end} / {.if pagination.nextPage}<a href="{nextPageUrl}">Older &rarr;</a>{.or}Older &rarr;{.end}
+    <div class="pagination_prev">
+      {.if pagination.prevPage}
+        <a href="{prevPageUrl}" class="pagination_link">
+          <i class="material-icons pagination_icon">&#xE5CB;</i>
+          <div class="pagination_text">Newer Posts</div>
+        </a>
+      {.or}
+        <div class="pagination_span">
+          <i class="material-icons pagination_icon">&#xE5CB;</i>
+          <div class="pagination_text">Newer Posts</div>
+        </div>
+      {.end}
+    </div>
+    <div class="pagination_next">
+      {.if pagination.nextPage}
+        <a href="{nextPageUrl}" class="pagination_link">
+          <div class="pagination_text">Older Posts</div>
+          <i class="material-icons pagination_icon">&#xE5CC;</i>
+        </a>
+      {.or}
+        <div class="pagination_span">
+          <div class="pagination_text">Older Posts</div>
+          <i class="material-icons pagination_icon">&#xE5CC;</i>
+        </div>
+      {.end}
+    </div>
   </nav>
 {.end}
