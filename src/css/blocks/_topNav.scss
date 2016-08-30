@@ -1,4 +1,6 @@
 .topNav {
+  display: flex;
+  align-items: center;
   color: $black;
   text-transform: uppercase;
   visibility: hidden;
@@ -8,18 +10,23 @@
   }
 
   ul {
+    display: flex;
+    list-style: none;
     padding: 0;
     margin: 0;
   }
 
   li {
-    display: inline-block;
     font-size: 1rem;
     font-weight: bold;
   }
 
   li:last-child a {
     @include btnFactory($magenta);
+  }
+
+  .buttonLink {
+    padding: 1em;
   }
 
   a:hover {
