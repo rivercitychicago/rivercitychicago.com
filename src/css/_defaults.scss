@@ -3,8 +3,10 @@ body {
   /*lost-utility: edit;*/
   width: 100%;
   max-width: none;
+  margin-top: $headerHeight--small;
   color: $black;
   font-family: $fontSerif;
+  @media (min-width: $headerHeight--breakpoint) { margin-top: $headerHeight--large; }
 }
 
 h1,

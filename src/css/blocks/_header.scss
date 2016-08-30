@@ -1,24 +1,37 @@
+$logoHeight--small: $headerHeight--small - 1.5rem;
+$logoHeight--large: $headerHeight--large - 1.5rem;
+
 .header {
-  padding: 0.75rem 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+  background: $white;
   font-family: $fontSans;
 
   .constraint {
     position: relative;
     lost-center: $maxWidth;
     justify-content: space-between;
-    align-items: center;
-    height: 2.5rem;
-    /*lost-center: $maxWidth $pageGutter;*/
+    height: $headerHeight--small;
   }
 
   .logo {
-    height: 100%;
+    align-self: center;
+    height: $logoHeight--small;
   }
 
   .logo img {
     display: block;
     width: auto;
     height: 100%;
+  }
+
+  &.THEME--FLOATING {
+    position: fixed;
+    box-shadow: 0 0 0.25rem rgba($black, 0.2);
+    background: rgba($white, 0.97);
   }
 }
 
@@ -72,12 +85,9 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: $headerHeight--breakpoint) {
   .header {
-    padding: 1rem 0;
-  }
-
-  .header .constraint {
-    height: 3.5rem;
+    .logo { height: $logoHeight--large }
+    .constraint { height: $headerHeight--large; }
   }
 }
