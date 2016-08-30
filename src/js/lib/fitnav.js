@@ -90,7 +90,7 @@ class FitNav {
 
   outerWidth(el) {
     let width = el.offsetWidth;
-    const style = el.currentStyle || getComputedStyle(el);
+    const style = getComputedStyle(el);
 
     width += parseInt(style.marginLeft, 10) + parseInt(style.marginRight, 10);
     return width;
