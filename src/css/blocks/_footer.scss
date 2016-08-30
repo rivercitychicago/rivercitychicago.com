@@ -19,7 +19,7 @@
 .footer__contact,
 .footer__location {
   font-size: 0.875rem;
-  a:hover { text-decoration: underline; }
+  a:hover { border-bottom: 1px solid; }
 
   a,
   i {
