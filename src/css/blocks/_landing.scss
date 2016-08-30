@@ -16,7 +16,7 @@
 
 .landing--hasImage {
   padding-top: 60%;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,8 +45,40 @@
   @include heroGradient($orange);
 }
 
+.landing--hasImage .html-block {
+  a:hover,
+  a:any-link {
+    color: #fff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p,
+  ul,
+  ol {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 600px) {
+  .landing--hasImage .html-block {
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
 @media (min-width: 900px) {
   .landing--hasImage {
     padding-top: 30rem;
+  }
+
+  .landing--hasImage .html-block {
+    h1 { font-size: 3rem; }
   }
 }
