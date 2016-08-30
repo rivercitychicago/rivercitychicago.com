@@ -68,7 +68,8 @@ a:hover {
 
 p,
 ul,
-ol {
+ol,
+blockquote {
   margin: 1.1875rem 0;
   font-size: 1.375em;
   line-height: 1.65;
@@ -80,6 +81,14 @@ ol {
 
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }
+}
+
+blockquote {
+  padding: 1rem;
+  border-left: 2px solid $gray;
+  background: #fcfcfc;
+  color: $gray;
+  font-style: italic;
 }
 
 hr {
