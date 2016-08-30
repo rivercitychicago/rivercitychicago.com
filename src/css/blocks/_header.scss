@@ -28,6 +28,10 @@ $logoHeight--large: $headerHeight--large - 1.5rem;
     height: 100%;
   }
 
+  .topNav {
+    width: 100%;
+  }
+
   &.THEME--FLOATING {
     position: fixed;
     box-shadow: 0 0 0.25rem rgba($black, 0.2);

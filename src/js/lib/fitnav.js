@@ -35,7 +35,7 @@ class FitNav {
     const children = this.calcChildrenWidth();
     const addWidth = this.calcAddWidth();
 
-    return (container - children - addWidth) >= 0;
+    return (container - children - addWidth) > 0;
   }
 
   calcContainerWidth() {
@@ -61,11 +61,12 @@ class FitNav {
 
   handleEvent(event) {
     switch (event.type) {
-    case 'resize':
-      // debounce(this.onResize, 2000);
-      this.onResize();
-      break;
-    default:
+      case 'resize':
+        // debounce(this.onResize, 2000);
+        this.onResize();
+        break;
+      default:
+        return;
     }
   }
 

@@ -1,6 +1,4 @@
 import $ from 'jquery';
-// import 'smartmenus';
-// import 'smartmenus/src/css/sm-core-css.css';
 import FitNav from './lib/fitnav';
 
 $(() => {
@@ -8,11 +6,6 @@ $(() => {
   const $menu = $nav.find('> ul');
   const $mobileNav = $('#menu');
   const $toggle = $('#mobileNavToggle');
-
-  // $menu.smartmenus({
-  //   subIndicatorsPos: 'append',
-  //   // subIndicatorsText: '\u25BC',
-  // });
 
   const visibleClass = 'STATE--visible';
 
